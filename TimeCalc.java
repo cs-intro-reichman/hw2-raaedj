@@ -8,17 +8,17 @@ public class TimeCalc {
                          (((((hours * 60) + minutes + minutesToAdd) / 60)) * 60);
         
         if(newMinutes >= 10){
-            if(newHours == 0){
-                System.out.print(newHours + "0:" + newMinutes);
-            }else{
+            if(newHours >= 10){
                 System.out.print(newHours + ":" + newMinutes);
+            }else{
+                System.out.print("0" + newHours + ":" + newMinutes);
             }
             }
             else{
-                if(newHours == 0){
-                    System.out.print(newHours + "0:0" + newMinutes);
-                }else{
+                if(newHours >= 10){
                     System.out.print(newHours + ":0" + newMinutes);
+                }else{
+                    System.out.print("0" + newHours + ":0" + newMinutes);
                 }
             }
         }
